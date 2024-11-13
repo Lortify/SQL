@@ -28,3 +28,26 @@ ORDER BY an_price DESC
 ```
 
 ![image](https://github.com/user-attachments/assets/0bd4ab9e-e274-4d9b-aa44-9aa3e6f4216d)
+
+
+## Задача 3
+
+Распарсить строку:
+
+![image](https://github.com/user-attachments/assets/6a01dfbc-2271-4961-9c08-abe52b4f6869)
+
+Решение:
+
+```
+select str_columns,
+ substring(trim(str_columns),1,1) as id,
+  trim(substring(trim(str_columns),3,8)) as first_name,
+  trim(substring(trim(str_columns),12,13)) as last_name,
+  substring(trim(right(str_columns,10)),1,2) as age,
+  trim(right(str_columns,1)) as gender
+from skill_fix
+
+```
+![image](https://github.com/user-attachments/assets/dfa151a0-993e-4919-b58f-02d44a348288)
+
+
