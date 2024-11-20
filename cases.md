@@ -51,3 +51,14 @@ from skill_fix
 ![image](https://github.com/user-attachments/assets/dfa151a0-993e-4919-b58f-02d44a348288)
 
 
+## Задача 4
+
+![image](https://github.com/user-attachments/assets/323f2fc9-7b13-4c96-b539-ebaf318595d5)
+
+```
+SELECT COUNT (*) as cnt_users FROM 
+  (SELECT DISTINCT user_id FROM ozon.purchases 
+   WHERE CAST(created_at AS date)='2023-10-01' AND sku_id = '2')
+   as ttt
+
+```
